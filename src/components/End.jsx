@@ -1,6 +1,6 @@
-import React from 'react'
 
-const End = () => {
+
+const End = ({retryGame}) => {
   return (
     <>
      <h1>Fim de jogo</h1>

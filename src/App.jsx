@@ -21,6 +21,11 @@ function App() {
   const verifyLetter = () => {
     setRunning(stages[2].gameStage)
   }
+
+  const retryGame = () => {
+    setRunning(stages[1].gameStage)
+  }
+
   const [words] = useState(wordsList)
 
 
@@ -29,7 +34,7 @@ function App() {
     <div className="app-center">
       {running === 'start' && <StartGame starting={startingGame} /> }
       {running === 'game' && <Game verifyLetter={verifyLetter}/>}
-      {running === 'end' && <End />}
+      {running === 'end' && <End  retryGame={retryGame}/>}
     </div>
       
     </>

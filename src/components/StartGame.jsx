@@ -5,7 +5,7 @@ const StartGame = ({starting}) => {
     <>
     <h1>Descubra a palavra escondida</h1>
 
-    <button onClick={starting}>Comecar a caça</button>
+    <button className="start-btn" onClick={starting}>Comecar a caça</button>
     
     </>
   )

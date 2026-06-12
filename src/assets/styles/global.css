@@ -1,4 +1,5 @@
 * {
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,4 +8,42 @@
 body {
     background-image: linear-gradient(135deg, rgb(65, 62, 77), rgb(18, 28, 36));
     min-height: 100vh;
+}
+
+.app-center {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h1 {
+    color: white;
+    margin-bottom: 200px;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 1.13rem;
+    border: none;
+    outline: none;
+    transition: ease 0.2s;
+}
+
+button:hover {
+    border-radius: 10px;
+    padding: 10px 25px;
+}
+
+.start-btn {
+    color: rgb(59, 36, 102);
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    background-color: rgb(180, 180, 247);
+}
+
+.start-btn:hover {
+    background-color: rgb(155, 155, 240);
 }
