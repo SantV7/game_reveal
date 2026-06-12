@@ -17,6 +17,7 @@ body {
     align-items: center;
     text-align: center;
 }
+
 h1 {
     color: white;
     margin-bottom: 200px;
@@ -46,4 +47,14 @@ button:hover {
 
 .start-btn:hover {
     background-color: rgb(155, 155, 240);
+}
+
+.retry-btn {
+    font-size: 1.3rem;
+    color: white;
+    background-color: rgb(82, 74, 109);
+}
+
+.retry-btn:hover {
+    background-color: rgb(91, 78, 134);
 }

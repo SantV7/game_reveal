@@ -4,7 +4,11 @@ import StartGame from "./components/StartGame"
 import Game from "./components/Game"
 import End from "./components/End"
 import { wordsList } from "./components/words/words"
+
+
+
 function App() {
+  
 
   const stages = [
     {id: 1, gameStage: 'start'},
@@ -12,9 +16,25 @@ function App() {
     {id: 3, gameStage: 'end'},
   ]
 
+  const [words] = useState(wordsList)
+
+  const [selectedWord, setSelectedWord] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('')
+
+  const [letter, setLetter] = useState([])
+
   const [running, setRunning] = useState(stages[0].gameStage)
 
+
+  function selectWordAndCategory () {
+    const categories = Object.keys(words)
+    const category = categories[Math.floor(Math.random() * Object.keys(categories).length)]
+  }
+
+
   const startingGame = () => {
+    selectWordAndCategory()
+    
     setRunning(stages[1].gameStage)
   }
 
@@ -23,10 +43,10 @@ function App() {
   }
 
   const retryGame = () => {
-    setRunning(stages[1].gameStage)
+    setRunning(stages[0].gameStage)
   }
 
-  const [words] = useState(wordsList)
+
 
 
   return (
