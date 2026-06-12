@@ -1,5 +1,8 @@
 import { useState } from "react"
 import './assets/styles/global.css'
+import StartGame from "./components/StartGame"
+import Game from "./components/Game"
+import End from "./components/End"
 
 function App() {
 
@@ -11,13 +14,21 @@ function App() {
 
   const [running, setRunning] = useState(stages[0].gameStage)
 
+  const startingGame = () => {
+    setRunning(stages[1].gameStage)
+  }
+
+  const verifyLetter = () => {
+    setRunning(stages[2].gameStage)
+  }
+
 
   return (
     <>
     <div className="app-center">
-      {running === 'start' && }
-      {running === 'game' && }
-      {running === 'end' && }
+      {running === 'start' && <StartGame starting={startingGame} /> }
+      {running === 'game' && <Game verifyLetter={verifyLetter}/>}
+      {running === 'end' && <End />}
     </div>
       
     </>
