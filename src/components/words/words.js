@@ -1,5 +1,5 @@
 export const wordsList = {
-    animes: ['demon slayer', 'tokyo ghoul', 'atack on titan', 'finland saga'],
-    frutas: ['maça', 'uva', 'morango', 'jaca'],
-    perifericos: ['light bar', 'mouse', 'tecaldo', 'jbl']
+    animes: ['Demon Slayer', 'Tokyo Ghoul', 'Atack on titan', 'Finland Saga'],
+    frutas: ['Maça', 'Uva', 'Morango', 'Jaca'],
+    perifericos: ['Light Bar', 'Mouse', 'Tecaldo', 'Jbl']
 }

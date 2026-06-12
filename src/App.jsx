@@ -19,6 +19,7 @@ function App() {
   const [words] = useState(wordsList)
 
   const [selectedWord, setSelectedWord] = useState('')
+
   const [selectedCategory, setSelectedCategory] = useState('')
 
   const [letter, setLetter] = useState([])
@@ -29,12 +30,19 @@ function App() {
   function selectWordAndCategory () {
     const categories = Object.keys(words)
     const category = categories[Math.floor(Math.random() * Object.keys(categories).length)]
+    const wordMain = words[category][Math.floor(Math.random() * Object.keys(categories).length)]
+      return {category, wordMain}
   }
 
 
   const startingGame = () => {
-    selectWordAndCategory()
-    
+    const { category, wordMain } = selectWordAndCategory()
+
+    let wordLetter = wordMain.toLowerCase().split('')
+
+    console.log(wordLetter)
+
+    console.log(`Categoria: ${category}: palavra a se revelar: ${wordMain}`)
     setRunning(stages[1].gameStage)
   }
 
