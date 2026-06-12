@@ -3,7 +3,7 @@ import './assets/styles/global.css'
 import StartGame from "./components/StartGame"
 import Game from "./components/Game"
 import End from "./components/End"
-
+import { wordsList } from "./components/words/words"
 function App() {
 
   const stages = [
@@ -21,6 +21,7 @@ function App() {
   const verifyLetter = () => {
     setRunning(stages[2].gameStage)
   }
+  const [words] = useState(wordsList)
 
 
   return (
