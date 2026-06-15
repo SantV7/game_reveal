@@ -26,10 +26,11 @@ function App() {
 
   const [running, setRunning] = useState(stages[0].gameStage)
 
-
   function selectWordAndCategory () {
     const categories = Object.keys(words)
+    
     const category = categories[Math.floor(Math.random() * Object.keys(categories).length)]
+
     const wordMain = words[category][Math.floor(Math.random() * Object.keys(categories).length)]
       return {category, wordMain}
   }
@@ -39,12 +40,11 @@ function App() {
     const { category, wordMain } = selectWordAndCategory()
 
     let wordLetter = wordMain.toLowerCase().split('')
+    
+    setLetter(wordLetter)
+    setSelectedCategory(category)
+}
 
-    console.log(wordLetter)
-
-    console.log(`Categoria: ${category}: palavra a se revelar: ${wordMain}`)
-    setRunning(stages[1].gameStage)
-  }
 
   const verifyLetter = () => {
     setRunning(stages[2].gameStage)
@@ -53,7 +53,7 @@ function App() {
   const retryGame = () => {
     setRunning(stages[0].gameStage)
   }
-
+  
 
 
 
@@ -61,12 +61,13 @@ function App() {
     <>
     <div className="app-center">
       {running === 'start' && <StartGame starting={startingGame} /> }
-      {running === 'game' && <Game verifyLetter={verifyLetter}/>}
+      {running === 'game' && <Game verifyLetter={verifyLetter} letter={letter}/>}
       {running === 'end' && <End  retryGame={retryGame}/>}
     </div>
       
     </>
   )
 }
+  
 
 export default App
