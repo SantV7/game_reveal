@@ -27,7 +27,6 @@ const Game = ({ verifyLetter, letter, category }) => {
 
     setInputLetter('')
     function increasePoints() {
-  
       {guessedLetters.includes(item) ? setPoints((prevPoints) => prevPoints + 100): points}
       
     }
