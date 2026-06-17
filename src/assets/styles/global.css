@@ -58,3 +58,21 @@ button:hover {
 .retry-btn:hover {
     background-color: rgb(91, 78, 134);
 }
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: 10px;
+    width: 50%;
+    height: 300px;
+}
+
+.flex-row > div {
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.534);
+    color: white;
+    font-size: 3rem;
+    padding: 10px;
+    background-color: rgb(103, 96, 112);
+}

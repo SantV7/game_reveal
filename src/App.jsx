@@ -43,6 +43,7 @@ function App() {
     
     setLetter(wordLetter)
     setSelectedCategory(category)
+    setRunning(stages[1].gameStage)
 }
 
 
