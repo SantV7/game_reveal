@@ -20,7 +20,53 @@ body {
 
 h1 {
     color: white;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+h3 {
+    color: rgb(216, 210, 253);
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border-bottom: 3px solid gray;
+}
+p {
+    padding: 15px 30px;
+    font-size: 1.3rem;
+    border-radius: 3px;
+    background-color: rgb(62, 62, 104);
+    color: rgb(216, 210, 253);
+}
+
+.input_letter {
+    transition: ease 0.23s;
+    font-size: 2rem;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(192, 192, 255, 0.774);
+    color: black;
+    border-radius: 3px;
+    outline: none;
+    text-align: center;
+}
+
+.input_letter:focus {
+    max-width: 144px;
+    border: 1px solid rgb(65, 70, 82);
+}
+
+.input_letter:focus::placeholder {
+    color: transparent;
+}
+
+.input_letter::placeholder {
+    color: black;
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 
 button {
@@ -37,6 +83,10 @@ button {
 button:hover {
     border-radius: 10px;
     padding: 10px 25px;
+}
+
+#verifyL {
+    margin-bottom: 15px;
 }
 
 .start-btn {
@@ -58,6 +108,7 @@ button:hover {
 .retry-btn:hover {
     background-color: rgb(91, 78, 134);
 }
+
 .flex-row {
     display: flex;
     justify-content: center;
@@ -72,7 +123,20 @@ button:hover {
     font-weight: 600;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.534);
     color: white;
-    font-size: 3rem;
-    padding: 10px;
+    font-size: 3.4rem;
+    min-height: 100px;
+    min-width: 100px;
+    border-radius: 4px;
+    padding: 25px;
     background-color: rgb(103, 96, 112);
+    
+}
+
+
+.div_letter_none {
+    display: none;
+}
+
+.div_letter_show {
+    display: block;
 }

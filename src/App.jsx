@@ -62,7 +62,7 @@ function App() {
     <>
     <div className="app-center">
       {running === 'start' && <StartGame starting={startingGame} /> }
-      {running === 'game' && <Game verifyLetter={verifyLetter} letter={letter}/>}
+      {running === 'game' && <Game verifyLetter={verifyLetter} category={selectedCategory} letter={letter} selectWord={selectedWord}/>}
       {running === 'end' && <End  retryGame={retryGame}/>}
     </div>
       
