@@ -17,9 +17,9 @@ const Game = ({ verifyLetter, letter, category }) => {
       if (!guessedLetters.includes(normalizedLetter)) {
         setGuessedLetters([...guessedLetters, normalizedLetter])
         setPoints((prevPoints) => prevPoints + 100)
-        
       }
     } else {
+      setPoints((prevPoints) => prevPoints - 50)
       if (!wrongLetters.includes(normalizedLetter)) {
         setWrongLetters([...wrongLetters, normalizedLetter])
       }
