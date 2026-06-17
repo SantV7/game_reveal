@@ -5,6 +5,9 @@ const Game = ({ verifyLetter, letter, category }) => {
   const [guessedLetters, setGuessedLetters] = useState([])
   const [wrongLetters, setWrongLetters] = useState([])
 
+  const [points, setPoints] = useState(0)
+  
+
   function verificarInclude() {
     const normalizedLetter = inputLetter.toLowerCase().trim()
 
@@ -13,6 +16,8 @@ const Game = ({ verifyLetter, letter, category }) => {
     if (letter.includes(normalizedLetter)) {
       if (!guessedLetters.includes(normalizedLetter)) {
         setGuessedLetters([...guessedLetters, normalizedLetter])
+        setPoints((prevPoints) => prevPoints + 100)
+        
       }
     } else {
       if (!wrongLetters.includes(normalizedLetter)) {
@@ -21,7 +26,14 @@ const Game = ({ verifyLetter, letter, category }) => {
     }
 
     setInputLetter('')
+    function increasePoints() {
+  
+      {guessedLetters.includes(item) ? setPoints((prevPoints) => prevPoints + 100): points}
+      
+    }
+    increasePoints()
   }
+
 
   return (
     <>
@@ -30,7 +42,7 @@ const Game = ({ verifyLetter, letter, category }) => {
       <h2>Adivinhe a palavra</h2>
       <h3>Tema: {category}</h3>
       <p>
-        <span>Pontuação: 000</span>
+        <span>Pontuação: {points}</span>
       </p>
 
       <div>
